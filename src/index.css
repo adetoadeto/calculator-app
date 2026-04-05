@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+    --font-size: 32px;
+    --font-family: "League Spartan", sans-serif;
+    ;
+    --font-weight: 700;
+    --border-radius-sm: 5px;
+    --border-radius-md: 10px;
+    --white: hsl(0, 100%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100%;
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+
+}
+
+.theme1 {
+    --frame-bg: hsl(222, 26%, 31%);
+    --nav-color: var(--white);
+
+    --slider-and-frameII-bg: hsl(223, 31%, 20%);
+
+    --display-screen-bg: hsl(224, 36%, 15%);
+    --display-screen-color: var(--white);
+
+    --keypad-color: hsl(221, 14%, 31%);
+
+    --keypad-bg-I: hsl(225, 21%, 49%);
+    --keypad-bg-I-hover: hsl(226, 27%, 66%);
+    --keypad-shadow-I: hsl(224, 28%, 35%);
+
+
+    --keypad-bg-II: hsl(6, 63%, 50%);
+    --keypad-bg-II-hover: hsl(6, 63%, 60%);
+    --keypad-shadow-II: hsl(6, 70%, 34%);
+
+    --keypad-bg-III: hsl(0, 0%, 90%);
+    --keypad-bg-III-hover: var(--white);
+    --keypad-shadow-III: hsl(28, 16%, 65%);
+
+    --sum-color: var(--white);
+}
+
+.theme2 {
+    --frame-bg: hsl(0, 0%, 90%);
+    --nav-color: var(--keypad-color);
+
+    --slider-and-frameII-bg: hsl(0, 5%, 81%);
+
+    --display-screen-bg: hsl(0, 0%, 93%);
+    --display-screen-color: var(--keypad-color);
+
+    --keypad-color: hsl(60, 10%, 19%);
+    --keypad-bg-hover-color: var(--white);
+
+    --keypad-bg-I: hsl(185, 42%, 37%);
+    --keypad-bg-I-hover: hsl(185, 42%, 60%);
+    --keypad-shadow-I: hsl(185, 58%, 25%);
+
+    --keypad-bg-II: hsl(25, 98%, 40%);
+    --keypad-bg-II-hover: hsl(25, 98%, 60%);
+    --keypad-shadow-II: hsl(25, 99%, 27%);
+
+    --keypad-bg-III: hsl(0, 0%, 90%);
+    --keypad-bg-III-hover: var(--white);
+    --keypad-shadow-III: hsl(35, 11%, 61%);
+
+    --sum-color: var(--white);
+}
+
+
+.theme3 {
+    --frame-bg: hsl(268, 75%, 9%);
+    --nav-color: var(--keypad-color);
+
+    --slider-and-frameII-bg: hsl(268, 71%, 12%);
+
+    --display-screen-bg: var(--slider-and-frameII-bg);
+    --display-screen-color: var(--keypad-color);
+
+    --keypad-color: hsl(52, 100%, 62%);
+    --keypad-bg-hover-color: var(--white);
+
+    --keypad-bg-I: hsl(281, 89%, 26%);
+    --keypad-bg-I-hover: hsl(281, 89%, 45%);
+    --keypad-shadow-I: hsl(285, 91%, 52%);
+
+    --keypad-bg-II: hsl(176, 100%, 44%);
+    --keypad-bg-II-hover: hsl(176, 100%, 78%);
+    --keypad-shadow-II: hsl(177, 92%, 70%);
+
+    --keypad-bg-III: hsl(268, 47%, 21%);
+    --keypad-bg-III-hover: hsl(268, 47%, 45%);
+    --keypad-shadow-III: hsl(290, 70%, 36%);
+
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+li {
+    list-style-type: none;
+}
+
+.calculator-frame {
+    background-color: var(--frame-bg);
+    padding: 2rem;
+}
+
+.calculator-frame nav {
+    display: flex;
+    justify-content: space-between;
+    color: var(--nav-color);
+}
+
+.calculator-frame h1 {
+    font-size: var(--font-size);
+}
+
+.calculator-frame .theme-slider {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 14px;
+    margin-right: 0.5rem;
+}
+
+.theme-slider p {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.theme-slider>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.theme-slider>div ul {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.theme-slider-bar {
+    background-color: var(--slider-and-frameII-bg);
+    border-radius: 15px;
+    width: 100%;
+    height: 18px;
+    padding: 5px 8px;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.theme-slider-bar>div {
+    height: 18px;
+    width: 18px;
+    background-color: var(--keypad-bg-II);
+    border-radius: 50%;
+}
+
+.theme-slider-bar>div:hover {
+    background-color: var(--keypad-bg-II-hover);
+    cursor: pointer;
+}
+
+.display-screen {
+    padding: 1.7rem 1.5rem;
+    border-radius: var(--border-radius-md);
+    margin-top: 2rem;
+    background-color: var(--display-screen-bg);
+}
+
+.display-screen p {
+    font-size: 38px;
+    letter-spacing: 2px;
+    text-align: end;
+    color: var(--display-screen-color);
+    font-weight: var(--font-weight);
+}
+
+.keypad-box {
+    margin-top: 1.5rem;
+    border-radius: var(--border-radius-md);
+    padding: 1.8rem;
+    background-color: var(--slider-and-frameII-bg);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem 1.1rem;
+}
+
+.keypad-box li {
+    box-shadow: 0 5px 0 var(--keypad-shadow-III);
+    border-radius: var(--border-radius-sm);
+    height: 65px;
+    text-align: center;
+    background-color: var(--keypad-bg-III);
+    color: var(--keypad-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.keypad-box li:hover {
+    cursor: pointer;
+    background-color: var(--keypad-bg-III-hover);
+}
+
+.keypad-box li:nth-child(4),
+.keypad-box li:nth-child(17),
+.keypad-box li:nth-child(18) {
+    text-transform: uppercase;
+    font-size: 24px;
+
+}
+
+.keypad-box li:nth-child(4),
+.keypad-box li:nth-child(17) {
+    background-color: var(--keypad-bg-I);
+    box-shadow: 0 5px 0 var(--keypad-shadow-I);
+    color: var(--white);
+}
+
+.keypad-box li:nth-child(4):hover,
+.keypad-box li:nth-child(17):hover {
+    background-color: var(--keypad-bg-I-hover);
+}
+
+.keypad-box li:nth-child(17),
+.keypad-box li:nth-child(18) {
+    grid-column: span 2;
+}
+
+.keypad-box li:nth-child(18) {
+    background-color: var(--keypad-bg-II);
+    box-shadow: 0 5px 0 var(--keypad-shadow-II);
+    color: var(--sum-color);
+}
+
+.keypad-box li:nth-child(18):hover {
+    background-color: var(--keypad-bg-II-hover);
+}
+
+@media(min-width: 768px) {
+    .calculator-frame > section {
+        max-width: 450px;
+        margin: auto;
+    }
+}
