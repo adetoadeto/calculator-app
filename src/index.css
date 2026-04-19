@@ -3,7 +3,6 @@
 :root {
     --font-size: 32px;
     --font-family: "League Spartan", sans-serif;
-    ;
     --font-weight: 700;
     --border-radius-sm: 5px;
     --border-radius-md: 10px;
@@ -110,11 +109,11 @@ body {
 }
 
 .hide {
-    display: none;
+    opacity: 0;
 }
 
 .show {
-    display: block;
+    visibility: 100%;
 }
 
 li {
@@ -122,8 +121,11 @@ li {
 }
 
 .calculator-frame {
+    min-height: 100vh;
+    height: fit-content;
     background-color: var(--frame-bg);
     padding: 2rem;
+    transition: all 0.3s ease-in-out;
 }
 
 .calculator-frame nav {
@@ -172,14 +174,15 @@ li {
     justify-content: space-between;
 }
 
-.theme-slider-bar>div {
+.theme-slider-bar button {
     height: 18px;
     width: 18px;
     background-color: var(--keypad-bg-II);
     border-radius: 50%;
+    border: none;
 }
 
-.theme-slider-bar>div:hover {
+.theme-slider-bar button:hover {
     background-color: var(--keypad-bg-II-hover);
     cursor: pointer;
 }
@@ -189,6 +192,8 @@ li {
     border-radius: var(--border-radius-md);
     margin-top: 2rem;
     background-color: var(--display-screen-bg);
+    height: 20px;
+    overflow: hidden;
 }
 
 .display-screen p {
@@ -200,12 +205,12 @@ li {
 }
 
 .keypad-box {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     border-radius: var(--border-radius-md);
     padding: 1.8rem;
     background-color: var(--slider-and-frameII-bg);
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto, (minmax(200px, 1fr)));
     gap: 1.5rem 1.1rem;
 }
 
@@ -231,7 +236,6 @@ li {
 .keypad-box li:nth-child(18) {
     text-transform: uppercase;
     font-size: 24px;
-
 }
 
 .keypad-box li:nth-child(4),
@@ -261,8 +265,13 @@ li {
     background-color: var(--keypad-bg-II-hover);
 }
 
+@media(min-width: 480px) {
+    .keypad-box {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 @media(min-width: 768px) {
-    .calculator-frame > section {
+    .calculator-frame>section {
         max-width: 450px;
         margin: auto;
     }
