@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: (https://github.com/adetoadeto/calculator-app/)
+- Live Site URL: (https://calculator-app-three-orpin.vercel.app/)
 
 ## My process
 
